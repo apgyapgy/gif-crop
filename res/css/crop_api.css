@@ -1,0 +1,80 @@
+body{
+    background:#000 url(../images/back.png);
+    background-attachment:fixed;
+}
+/*导航开始*/
+.nav-wrap{
+    width:1030px;
+    height:108px;
+    margin:0 auto;
+}
+.toolNav {
+    width  : 1030px;
+    height : 108px;
+}
+.toolNav a{
+    float:left;
+    margin-right:17px;
+    margin-top:42px;
+    width:245px;
+    height:66px;
+    font-size: 18px;
+    line-height:66px;
+    color: #fff;
+    border-radius: 4px;
+    background: #2B2D37;
+    letter-spacing: 2.4px;
+    cursor:pointer;
+}
+.toolNav a.toolBeauty{
+    margin-right:16px;
+}
+/* .toolNav a:last-of-type{
+    margin-right:0;
+} */
+.toolNav a,
+.toolNav a:link,
+.toolNav a:visited,
+.toolNav a:hover,
+.toolNav a:active{
+    text-decoration: none;
+    color:#fff;
+}
+.toolNav a:hover{
+    color:#fff;
+}
+.toolNav a.toolCompress:hover,
+.toolNav a.toolCompress.active{
+    background-image: linear-gradient(-136deg, #A3D7DD 0%, #B0A2DB 100%);
+}
+.toolNav a.toolCut:hover,
+.toolNav a.toolCut.active{
+    background-image: linear-gradient(-135deg, #E86874 0%, #E58A4D 100%);
+}
+.toolNav a.toolBeauty:hover,
+.toolNav a.toolBeauty.active{
+    background-image: linear-gradient(-135deg, #86CD6D 0%, #60C4AF 100%);
+}
+.toolNav a i{
+    float:left;
+    width:100px;
+    height:100%;
+}
+.toolNav a.toolCompress i{
+    width:115px;
+    background:url(../images/compress.png) no-repeat 56px center;
+    background-size:27px 32px;
+}
+.toolNav a.toolCut i{
+    width:110px;
+    background:url(../images/cut.png) no-repeat 51px center;
+    background-size:32px 32px;
+}
+.toolNav a.toolBeauty i{
+    width:108px;
+    background:url(../images/beauty.png) no-repeat 56px center;
+    background-size:36px 36px;
+}
+.container{
+    margin-bottom:30px;
+}

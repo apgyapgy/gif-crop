@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>你所访问的页面不存在 (404)</title>
+  <style type="text/css">
+        body {
+		  color: #666;
+		  text-align: center;
+		  font-family: Helvetica, 'microsoft yahei', Arial, sans-serif;
+		  margin:0;
+		  width: 800px;
+		  margin: auto;
+		  font-size: 14px;
+		}
+		h1 {
+		  font-size: 56px;
+		  line-height: 100px;
+		  font-weight: normal;
+		  color: #456;
+		}
+		h2 { font-size: 24px; color: #666; line-height: 1.5em; }
+		
+		h3 {
+		  color: #456;
+		  font-size: 20px;
+		  font-weight: normal;
+		  line-height: 28px;
+		}
+		
+		hr {
+		  margin: 18px 0;
+		  border: 0;
+		  border-top: 1px solid #EEE;
+		  border-bottom: 1px solid white;
+		}
+		
+		a{
+		    color: #17bc9b;
+		    text-decoration: none;
+		}
+    </style>
+	 <script type="text/javascript">
+        var host = window.location.protocol + "//" + window.location.host;
+        if (location.href.indexOf('localhost') > -1) {
+            var pathname = window.location.pathname;
+            var proName = pathname.substring(0, pathname.lastIndexOf('\/'));
+            host = host + proName;
+        }
+        //console.log(host);
+        
+        function changeLink()
+        {
+        	 document.getElementById("home").href = host;
+        }
+    </script>
+</head>
+<body onload="changeLink()">
+  <h1>404</h1>
+  <h3>你所访问的页面不存在.</h3>
+  <hr>
+  <p>你可能输入了不存在的URL地址，或者该资源已经被删除， <a id="home" href="#">点击这里</a> 回到首页.</p>
+</body></html>

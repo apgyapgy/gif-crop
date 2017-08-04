@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>gif 裁切</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="Keywords" content="图片裁切, gif 裁切, gif">
+    <meta name="Description" content="gif 裁切工具">
+
+   <!-- <link rel="stylesheet" href="res/static/site.css?v=1" type="text/css"/>
+    <script type="text/javascript" src="res/static/site.js?v=1"></script>
+    <script type="text/javascript" src="res/static/jquery.min.js"></script>
+    <script type="text/javascript" src="res/static/background.js"></script>-->
+
+    <link rel="stylesheet" href="res/css/crop.css" type="text/css"/>
+    <link rel="stylesheet" href="res/js/imgareaselect/imgareaselect-default.css" type="text/css"/>
+    <script type="text/javascript" src="res/js/jquery.min.js"></script>
+    <script type="text/javascript" src="res/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="res/js/imgareaselect/jquery.imgareaselect.min.js"></script>
+    <script type="text/javascript" src="res/js/watermark.js"></script>
+    <script type="text/javascript" src="res/js/jquery.ui.shake.min.js"></script>
+    <script type="text/javascript" src="res/js/iframeCrop.js"></script>
+    <script type="text/javascript" src="res/js/background.js"></script>
+</head>
+<body class="sc body">
+<canvas style="position:fixed;left:0;top:0;width:100%;z-index:-1;"></canvas>
+<div class="container">
+    <div id="wrapper">
+           <div class="outer make-outer">
+            <input style="display:none;" type="file" accept="image/gif" id="files" name="files">
+            <div class="inner">
+                <div class="watermark-outer">
+                <span id="watermark" class="watermark-inner">
+                    <span class="watermark-big">粘贴GIF地址URL到这里，或点击右边按钮上传本地GIF</span>
+                    <!--<span class="watermark-small">「支持微博、微信、花瓣等图片网址」</span>-->
+                </span>
+
+                    <input autocomplete="off" id="url" name="url" type="text"
+                           class="watermark-input"/>
+                    <em class="watermark-upload-icon"><a id="uploadFile"><img
+                            src="res/images/upload.png"/></a></em>
+                </div>
+                <div class="make-btn"><span class="make-btn-txt">开始制作</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="outer err-info-outer">
+            <div class="inner">
+                <div class="err-info-wrap">
+                    <span class="err-info-img"><img src="res/images/err.png"/></span>
+                    <span class="err-info"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="outer img-info-outer">
+            <div class="inner">
+                <div class="srcImgInfo">
+                    <span class="srcImgInfo-txt">原图尺寸：<span id="srcImgInfo">400*226</span></span>
+                </div>
+                <div class="previewImgInfo">
+                    裁剪尺寸：<span id="previewImgInfo">300*169</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="outer img-outer">
+            <div class="inner img-inner">
+                <div class="fl img-content-bg img-content-bg-margin">
+                    <div class="img-content" id="source-outter">
+                    </div>
+                </div>
+                <div class="fl img-content-bg">
+                    <div class="img-preview-align-center"><!--js 控制预览图居中-->
+                        <div class="img-content-preview" id="preview-inner">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="download-btn-outer">
+            <div class="download-btn-inner">
+                <form action="crop/cropImg" method="post" id="download_form">
+                    <input type="hidden" id="srcFileName" name="srcFileName" value="default.gif"/>
+                    <input type="hidden" id="x" name="x"/>
+                    <input type="hidden" id="y" name="y"/>
+                    <input type="hidden" id="x2" name="x2"/>
+                    <input type="hidden" id="y2" name="y2"/>
+                    <input type="hidden" id="w" name="w"/>
+                    <input type="hidden" id="h" name="h"/>
+                    <span class="download-btn">裁剪并保存</span>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!--友盟代码-->
+<div style="display: none"><script src="http://s4.cnzz.com/z_stat.php?id=1260067336&web_id=1260067336" language="JavaScript"></script></div>
+<!--百度代码-->
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?37c68c083c2c85fe183a5e0224eb35a9";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+</body>
+</html>

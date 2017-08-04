@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>GIF裁剪工具_GIF压缩工具_GIF制作工具_视频转GIF工具_SOOGIF</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="Keywords" content="图片裁切, gif 裁切, gif">
+    <meta name="Description" content="gif 裁切工具">
+
+    <link rel="stylesheet" href="css/crop.css" type="text/css"/>
+    <link rel="stylesheet" href="css/crop_api.css" type="text/css"/>
+    <link rel="stylesheet" href="js/imgareaselect/imgareaselect-default.css" type="text/css"/>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/imgareaselect/jquery.imgareaselect.min.js"></script>
+    <script type="text/javascript" src="js/watermark.js"></script>
+    <script type="text/javascript" src="js/jquery.ui.shake.min.js"></script>
+    <script type="text/javascript" src="js/crop_api.js"></script>
+    <script>
+		// 友盟
+		// ydlx
+		// 2016-10-13
+		var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+		document.write(unescape("%3Cspan  style='display:none' id='cnzz_stat_icon_1260067336'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1260067336' type='text/javascript'%3E%3C/script%3E"));
+		
+		// 百度统计
+		// ydlx
+		// 2016-9-28
+		var _hmt = _hmt || [];
+		(function() {
+	  		var hm = document.createElement("script");
+	  		hm.src = "//hm.baidu.com/hm.js?37c68c083c2c85fe183a5e0224eb35a9";
+	  		var s = document.getElementsByTagName("script")[0]; 
+	  		s.parentNode.insertBefore(hm, s);
+		})();
+		//声明_czc对象:
+		var _czc = _czc || [];
+		//绑定siteid，请用您的siteid替换下方"XXXXXXXX"部分
+		_czc.push(["_setAccount", "1260067336"]);
+		 
+		// growing io
+		// ydlx
+		// 2016-8-9
+	    var _vds = _vds || [];
+	    window._vds = _vds;
+	      (function(){
+	        _vds.push(['setAccountId', 'beb66a1ac816845f']);
+	        (function() {
+	          var vds = document.createElement('script');
+	          vds.type='text/javascript';
+	          vds.async = true;
+	          vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+	          var s = document.getElementsByTagName('script')[0];
+	          s.parentNode.insertBefore(vds, s);
+	      })();
+	    })();
+	</script>
+</head>
+<body class="sc body">
+<div class="nav-wrap">
+    <div class="toolNav">
+        <a href="http://tool-compress.soogif.com/html/tool/compress.html" class="toolCompress"><i></i>GIF压缩</a>
+        <a href="http://tool-gifcrop.soogif.com/gifCrop/res/" class="toolCut active"><i></i>GIF裁剪</a>
+        <a href="http://tool-gifeditor.soogif.com/editor.jsp" class="toolBeauty"><i></i>GIF编辑</a>
+    </div> 
+</div>
+<script type="text/javascript">
+    $(".nav-wrap .toolNav a").click(function(e){
+        e.preventDefault();
+        var _search = window.location.search;
+        if(_search.indexOf("gif_id") != -1 && _search.indexOf("extension_id") != -1){
+            var _href = $(this).attr("href");
+            window.location.href = _href + _search;
+        }else if(!_search){
+            var _href = $(this).attr("href");
+            window.location.href = _href;
+        }
+    });
+</script>
+<!--导航 结束-->
+<div class="container">
+    <div id="wrapper">
+           <div class="outer make-outer">
+            <input style="display:none;" type="file" accept="image/gif" id="files" name="files">
+            <div class="inner">
+                <div class="watermark-outer">
+                <span id="watermark" class="watermark-inner">
+                    <span class="watermark-big"></span>
+                    <!--<span class="watermark-small">「支持微博、微信、花瓣等图片网址」</span>-->
+                </span>
+
+                    <input autocomplete="off" id="url" name="url" type="text"
+                           class="watermark-input" placeholder="粘贴GIF地址URL到这里，或点击右边按钮上传本地GIF" />
+                    <em class="watermark-upload-icon"><a id="uploadFile"><img
+                    src=""/>本地上传</a></em>
+                </div>
+                <div class="make-btn"><span class="make-btn-txt">开始制作</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="outer err-info-outer">
+            <div class="inner">
+                <div class="err-info-wrap">
+                    <span class="err-info-img"><img src="images/err.png"/></span>
+                    <span class="err-info"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="outer img-info-outer">
+            <div class="inner">
+                <div class="srcImgInfo">
+                    <span class="srcImgInfo-txt">原图尺寸：<span id="srcImgInfo">400*226</span></span>
+                </div>
+                <div class="previewImgInfo">
+                    裁剪尺寸：<span id="previewImgInfo">300*169</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="outer img-outer">
+            <div class="inner img-inner">
+                <div class="fl img-content-bg img-content-bg-margin">
+                    <div class="img-content" id="source-outter">
+                    </div>
+                </div>
+                <div class="fl img-content-bg">
+                    <div class="img-preview-align-center"><!--js 控制预览图居中-->
+                        <div class="img-content-preview" id="preview-inner">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="download-btn-outer">
+    <div class="download-btn-inner">
+        <form action="../crop/cropImg" method="post" id="download_form">
+            <input type="hidden" id="srcFileName" name="srcFileName" value="default.gif"/>
+            <input type="hidden" id="x" name="x"/>
+            <input type="hidden" id="y" name="y"/>
+            <input type="hidden" id="x2" name="x2"/>
+            <input type="hidden" id="y2" name="y2"/>
+            <input type="hidden" id="w" name="w"/>
+            <input type="hidden" id="h" name="h"/>
+            <span class="download-btn">裁剪并返回</span>
+        </form>
+    </div>
+</div>
+<!--友盟代码-->
+<!--<div style="display: none"><script src="http://s4.cnzz.com/z_stat.php?id=1260067336&web_id=1260067336" language="JavaScript"></script></div>-->
+<!--百度代码-->
+<script>/*
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?37c68c083c2c85fe183a5e0224eb35a9";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();*/
+</script>
+</body>
+</html>

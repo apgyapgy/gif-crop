@@ -1,0 +1,640 @@
+body {
+    font: normal 16px/1.618 "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+   /* background: url("../images/bg.jpg") #fff;*/
+    background:transparent;
+    /*下面的每行 div 总体宽度 923*/
+}
+
+* {
+    -moz-box-sizing: border-box;
+    box-sizing: borde
+    -webkit-box-sizing: border-box;r-box;
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
+input,textarea,button{
+    font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+button {
+    outline : none;
+}
+
+.nav > li {
+    position: relative;
+    display: block;
+}
+
+.sc.body {
+    width: 100%;
+    min-width: 1200px;
+}
+
+.outer {
+    width: 100%; /*第一层 div 居中对齐*/
+    display: inline-block; /*第一层 div 居中对齐*/
+    text-align: center; /*div 里面居中对齐*/
+}
+
+.inner {
+    width: 884px;
+    display: inline-block;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.container {
+    position:relative;
+    text-align: center;
+    /* padding-right: 15px;
+    padding-left: 15px; */
+    padding-bottom:35px;
+    margin:20px auto 0;
+    background:#2b2d37;
+    width:1030px;
+    border-radius:4px;
+}
+.container:before{
+    content: "";
+    position: absolute;
+    left: 368px;
+    top: -30px;
+    border-top: 16px solid transparent;
+    border-left: 16px solid transparent;
+    border-right: 16px solid transparent;
+    border-bottom: 16px solid #2b2d37;
+}
+
+#wrapper {
+   /* margin: 80px auto;*/
+    margin: 0 auto;
+    text-align: center;
+}
+.tab-outer {
+    width: 884px;
+    display: inline-block;
+    font-size: 0; /*去掉HTML中Inline-Block元素之间的空白,当前是 li 后面的空白,子元素需重新设置 font-size*/
+}
+
+.tab-li {
+    width: 221px;
+    height: 77px;
+    background: #2B2D37;
+    border-radius: 4px;
+    margin-right: 13px;
+    cursor: pointer;
+}
+
+.nav {
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.tab-txt{
+    width: 77px;
+    height: 25px;
+    letter-spacing: 2.4px;
+    float: right;
+    margin-top: 26px;
+    margin-right: 44px;
+}
+
+.tab-txt a{
+    font-size: 18px;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.tab-img {
+    float: left;
+    margin-top: 19px;
+    margin-left: 26px;
+}
+
+.tab-active {
+    background-image: linear-gradient(-135deg, #E7404F 0%, #E5984D 100%);
+    border-radius: 4px;
+}
+
+.tab-outer ul {
+    text-align: center;
+    list-style-type: none;
+}
+
+.tab-outer ul li {
+    display: inline-block;
+}
+
+.make-outer {
+    margin-top: 30px;
+}
+
+.make-btn {
+    position:relative;
+    float: left;
+    font-size: 20px;
+    background: #15cafa;
+    border-radius: 4px;
+    color: #fff;
+    letter-spacing: 0px;
+    width: 140px;
+    height: 50px;
+    margin-left: 10px;
+    border: none;
+    display: inline-block;
+    text-align: center;
+    /*text-shadow: 0 10px 15px rgba(0,0,0,0.30);*/
+    cursor: pointer;
+}
+
+.make-btn-txt {
+    weight: 5px;
+    color: #fff;
+    display: inline-block;
+    line-height: 50px;
+}
+
+.make-btn-warn {
+    background: url("../images/warn.png") no-repeat center center #C8394F;
+}
+.make-btn-success {
+    background: url("../images/success.png") no-repeat center center #70DC77;
+}
+.err-info-outer {
+    /* margin-top:5px;*/
+    height: 17px;
+    clear: both;
+    visibility: hidden;
+}
+.err-info-wrap {
+    margin-left: 15px;
+    float: left;
+}
+.err-info-img {
+    margin-right: 5px;
+}
+.err-info-img img {
+    vertical-align: middle;
+}
+.err-info {
+    font-size: 12px;
+    color: #FFFFFF;
+    letter-spacing: 0px;
+}
+.img-info-outer {
+    margin-top: 1px; 
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 0.88px;
+    clear: both;
+}
+.srcImgInfo {
+    width: 432px;
+    float: left;
+}
+.srcImgInfo-txt {
+    float: right
+}
+.previewImgInfo {
+    float: left;
+    margin-left: 17px;
+}
+
+.img-outer {
+    margin-top: 10px;
+}
+
+.img-inner {
+    overflow: hidden;
+}
+
+.img-content-bg {
+    background: url("../images/rect.png") no-repeat;
+    width: 432px;
+    height: 294px;
+    text-align: center;
+
+    /*垂直对齐*/
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.img-content-bg-margin {
+    margin-right: 17px;
+}
+
+.img-content {
+    line-height: 294px; /*垂直对齐*/
+    float: none; /*垂直对齐*/
+}
+
+.img-content img {
+    vertical-align: middle; /*垂直对齐*/
+}
+
+.img-content-preview {
+    overflow: hidden;
+    text-align: center;
+    /*margin-top: 160px;*/
+    /*line-height: 363px;*/ /*垂直对齐*/
+    /* float: none;*/ /*垂直对齐*/
+    /* width:300px;*/
+}
+
+.img-content-preview img {
+    vertical-align: middle; /*垂直对齐*/
+}
+
+img#source {
+    display: none;
+}
+
+/* #preview{background-color:#eee;padding:5px; border:1px solid #CCC;}*/
+
+/*hack ie*/
+div.pic {
+    /* 针对IE的Hack */
+    *display: block;
+    *font-size: 175px; /*约为高度的0.873，200*0.873 约为175*/
+    *font-family: Arial; /*防止非utf-8引起的hack失效问题，如gbk编码*/
+}
+
+.img-crop-out, .img-preview-outer {
+    /* border: 1px solid #ddd;*/
+}
+
+/* 使大图初始化时垂直居中 ,Jcrop.addclass 调用 :  (外部容器高(453 * 363) - 大图高容)/2  */
+/*.img-crop-out-middle {
+    margin-top: 68px;
+}
+
+!* 预览图尺寸和边距 , 使预览图垂直居中 , margin-top = (外部容器高(453 * 363) - 预览图设置高度(200)) /2  *!
+.img-crop-preview, .img-crop-preview img {
+    width: 280px;
+    height: 200px;
+    margin-top: 81px;
+}*/
+
+.img-crop-preview {
+    overflow: hidden;
+    display: inline-block;
+
+    line-height: 294px; /*垂直对齐*/
+    float: none; /*垂直对齐*/
+}
+
+.helper {
+    /*display: inline-block;*/ /*加上顶部有margin*/
+    height: 100%;
+    vertical-align: middle;
+}
+
+.download-btn-outer {
+    clear: both;
+    width: 1030px;
+    margin:30px auto 0;
+    padding-bottom:20px;
+    text-align: center;
+}
+.download-btn-inner {
+    position:relative;
+    background: #15cafa;
+    border-radius: 4px;
+    width: 512px;
+    height: 50px;
+    display: inline-block;
+}
+.download-btn {
+    display: block;
+    font-size: 24px;
+    color: #fff;
+    letter-spacing: 1px;
+    height:50px;
+    line-height:50px;
+    cursor: pointer;
+}
+
+.error {
+    background: #FBE3E4;
+    color: #8a1f11;
+    border-color: #FBC2C4;
+    width: 884px;
+    display: inline-block; /*居中对齐*/
+    visibility: hidden;
+}
+
+.error, .notice, .success {
+    margin-bottom: 1em;
+    /*border: 3px solid #FFD324;*/
+    /*background: #FFF6BF;
+    color: #514721;*/
+    padding: 1em;
+    margin: 1em 0;
+    border-radius: 3px;
+}
+
+.error p {
+    font-size: 90%;
+    padding: 2px 5px;
+    margin: 0;
+    line-height: 16px;
+    border-width: 1px;
+}
+
+/* 水印默认 style */
+.w-label {
+    position: absolute;
+    padding: 0 0 0 6px;
+    margin: 0;
+    font-size: .8em;
+    color: #999;
+    opacity: 1;
+}
+
+/* 水印隐藏标记 */
+.w-hide {
+    visibility: hidden;
+    opacity: 0;
+}
+
+/* 水印获得焦点时 */
+.w-active {
+    color: #ddd;
+}
+
+.watermark-outer {
+    display: inline-block;
+    float: left; /* bootstrap 已实现，无需添加，否则不会和其它 div 垂直左对齐*/
+    position: relative;
+    /*vertical-align: middle;*/ /*不注释时 validate 样式会错位*/
+    width:734px;
+    height:50px;
+    line-height:50px;
+   /*  border: 2px solid #25e8de; */ /*整个 height=24+2*/
+    box-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    border-radius: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    background-color: #fff;
+    background: #FFFFFF;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.watermark-outer._error{
+   /*  border:2px solid #C8394F; */
+}
+.watermark-outer._success{
+    /* border:2px solid #70DC77; */
+}
+.watermark-inner {
+    float: left;
+}
+
+.watermark-big {
+    position: absolute;
+    font-size: 16px;
+    color: #888;
+    letter-spacing: 0.88px;
+    margin-left: 12px;
+   /* width: 265px;*/ /*两个水印的时候*/
+    width: 470px;
+    height: 22px;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+}
+
+.watermark-small {
+    position: absolute;
+    margin-left: 300px;
+    opacity: 0.59;
+    font-size: 12px;
+    color: #2B2D37;
+    letter-spacing: 0.66px;
+}
+
+.watermark-input {
+    float: left;
+    margin-left: 17px;
+    margin-top:-1px;
+    height: 50px;
+    /*line-height: 64px;*/
+    width: 81%;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    color: #888;
+    letter-spacing: 1px;
+}
+
+.watermark-upload-icon {
+    position: absolute;
+    top:7px;
+    right:7px;
+    width:102px;
+    height:36px;
+    border-radius:100px;
+    background:#f43454 url(../images/up.png) 10px 10px no-repeat;
+    background-size:17px 17px;
+    font-size: 15px;
+    line-height:36px;
+    font-weight: 400;
+    font-style: normal;
+    /*cursor: pointer;*/
+}
+.watermark-upload-icon a{
+   float:left;
+   text-indent:24px; 
+   width:102px;
+   height:36px;
+   cursor:pointer;
+   color:#fdfdfd;
+   overflow:hidden;
+   border-radius:100px;
+}
+.watermark-upload-icon a img{
+    display:none;/* 
+    float:left;
+    margin-left:12px;
+    margin-top:10px;
+    width:16px;
+    height:16px;
+    background:#f00; */
+}
+
+/*以下是上传按钮是无文字的时候(uploadOld.png)*/
+.watermark-upload-icon-old {
+    right: 0;
+    text-align: right;
+    padding-right: 10px;
+    width: 20px;
+    color: #8d8d8d;
+    font-size: 14px;
+    font-weight: 400;
+    font-style: normal;
+    position: absolute;
+    top: 0;
+    right: .8em;
+    cursor: pointer;
+    margin-right: 13px;
+    margin-top: 13px;
+}
+
+/*超链接disabled属性不能用，可以用这个*/
+.inactive {
+    pointer-events: none;
+    cursor: default;
+}
+/*.download-btn-inner.inactive{
+    background:#eee;
+}*/
+.spinner-download-btn-inner {
+    margin-top: 4px;
+}
+
+/*https://jsfiddle.net/StephanWagner/kk5bd3hh/
+http://www.imooc.com/article/11033*/
+/* loading 进度条 */
+.spinner{
+    position:absolute;
+    left:0;
+    top:0;
+    display:block;
+    /* display: inline-block; */ /*水平居中*/
+    width: 140px;
+    height: 50px;
+    box-sizing: border-box;
+    border-radius:4px;
+    background:linear-gradient(to right, rgb(181, 40, 105) 0%, 
+    rgb(181, 40, 105) 6%, rgb(241, 46, 106) 6%, rgb(241, 46, 106) 20%, 
+    rgb(179, 31, 156) 20%, rgb(179, 31, 156) 22%, rgb(156, 25, 171) 22%, 
+    rgb(156, 25, 171) 38%, rgb(104, 72, 168) 38%, rgb(104, 72, 168) 44%, 
+    rgb(255, 58, 138) 44%, rgb(255, 58, 138) 60%, rgb(238, 105, 187) 60%, 
+    rgb(238, 105, 187) 66%, rgb(234, 219, 52) 66%, rgb(234, 219, 52) 74%, 
+    rgb(0, 227, 158) 74%, rgb(0, 227, 158) 92%, rgb(37, 198, 196) 92%) 0px 0px / 300% 100% repeat;
+    -webkit-animation:backposi 12s linear infinite;
+    -moz-animation:backposi 12s linear infinite;
+    -ms-animation:backposi 12s linear infinite;
+    animation:backposi 12s linear infinite;
+}
+@-webkit-keyframes backposi{
+    from{background-position:0% 0%;}
+    to{background-position:300% 0%;}
+}
+@-moz-keyframes backposi{
+    from{background-position:0% 0%;}
+    to{background-position:300% 0%;}
+}
+@-ms-keyframes backposi{
+    from{background-position:0% 0%;}
+    to{background-position:300% 0%;}
+}
+@keyframes backposi{
+    from{background-position:0% 0%;}
+    to{background-position:300% 0%;}
+}
+.download-btn-inner .spinner{
+    width:512px;
+}
+.spinner:before {
+    position:absolute;
+    top:5px;
+    content: '';
+    display: block;
+    width:30px;
+    height:30px;
+    border-radius: 50%;
+    border-top:5px solid #fff;
+    border-right:5px solid transparent;
+    border-bottom:5px solid transparent;
+    border-left:5px solid transparent;
+    animation: spinner 1s linear infinite;
+    /*border: 2px solid #ccc;
+    border-top-color: #333;*/
+}
+.make-btn .spinner:before{
+    left:50px;
+}
+.download-btn-inner .spinner:before{
+    left:236px;
+}
+@keyframes spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner-absolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -10px;
+    margin-left: -10px;
+}
+
+/* Animations */
+.spinner-add,
+.spinner-remove {
+    animation-fill-mode: both;
+    /*animation-duration: .4s;*/ /*确定下载 按钮消失后有晃动，暂时取消，单独用于 gif制作按钮可添加上*/
+}
+
+/* .spinner-add {
+    animation-name: spinner-add;
+} */
+
+/* @keyframes spinner-add {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+} */
+
+/* .spinner-remove {
+    animation-name: spinner-remove;
+}
+
+@keyframes spinner-remove {
+    to {
+        transform: scale(0);
+    }
+} */
+
+/*导航*/
+#main{
+	margin:10px auto 0;
+	width:884px;
+	height:85px;
+	background:#000;
+}
+
+#iframes{
+	width:100%;
+	height:428px;
+}
+#iframes iframe{
+	display:none;
+}
+#iframes iframe:nth-child(2){
+	display:block;
+}
